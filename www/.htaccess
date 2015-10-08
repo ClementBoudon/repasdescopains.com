@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^repasdescopains.com$
+RewriteRule ^(.*)   http://www.repasdescopains.com/$1  [QSA,L,R=301]
