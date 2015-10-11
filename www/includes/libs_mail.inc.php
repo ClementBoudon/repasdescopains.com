@@ -35,13 +35,14 @@ function envoi_mail_code($email,$nom,$pass){
 
     // Additional headers
     $headers .= 'From: '.$nom_exp.' <'.$email_exp.'>' . "\n";
-    $headers .= 'Reply-To: '.$email_exp.''."\n"; 
+    $headers .= 'Reply-To: '.$email_exp.''."\n";
     /*$headers .= 'To: '.$nom.' <'.$email.'>' . "\r\n";*/
 
     $contenu_mail = str_replace('<--pass-->',$pass,$contenu_mail);
     $contenu_mail_txt = str_replace('<--pass-->',$pass,$contenu_mail_txt);
     // smtp.repasdescopains.com port 587 //SSL :  ssl0.ovh.net 465
-/*
+
+    /** Version PHPMailer
     $mail = new PHPMailer;
 
     $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -50,7 +51,7 @@ function envoi_mail_code($email,$nom,$pass){
     $mail->Username = 'clement@repasdescopains.com';      // SMTP username
     $mail->Password = 'Fg56DyU3AZ56';                     // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;  
+    $mail->Port = 465;
 
 
     $mail->From = $email_exp;
@@ -71,10 +72,42 @@ function envoi_mail_code($email,$nom,$pass){
     } else {
        $retour_mail = true;
     }
-*/
+    */
 
+    /** Version mail local
 
     $retour_mail = mail($email,$titre_mail,$contenu_mail,$headers);
 
+    */
+
+    /** Version Mailjet */
+    $retour_mail = sendEmailMailjet($email,$titre_mail,$contenu_mail,$headers,$email_exp,$contenu_mail_txt);
+
     return $retour_mail;
+}
+
+function sendEmailMailjet($email,$titre_mail,$contenu_mail,$headers,$email_exp,$contenu_mail_txt)
+{
+    require_once 'includes/php-mailjet-v3-simple.class.php';
+
+    $mj = new Mailjet();
+
+    $params = array(
+        "method" => "POST",
+        "from" => $email_exp,
+        "to" => $email,
+        "subject" => $titre_mail,
+        "text" => $contenu_mail_txt,
+        "html" => $contenu_mail
+    );
+
+    $result = $mj->sendEmail($params);
+
+
+    if ($mj->_response_code == 200)
+       $result = true;
+    else
+       $result = false;
+
+    return $result;
 }
