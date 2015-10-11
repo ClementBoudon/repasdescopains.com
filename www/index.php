@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <meta name="google-site-verification" content="ky3TyHIdwddXeNqauLvCrPoiozRuz_W5DQFFVcs46pA" />
 
     <meta name="description" content="Repas des Copains - Site pour les Beurris" />
     <meta name="keywords" content="" />
-    
+
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -35,7 +35,7 @@
 
     <!-- siimple style -->
     <link href="assets/css/style.css" rel="stylesheet">
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -55,14 +55,14 @@
             <p class="bg-danger text-danger">Tu me vexes en essayant ça, tu sais.</p>
           <?php } ?>
 					<h2 class="subtitle">Toi aussi d&eacute;couvre qui tu vas d&eacute;cevoir cette ann&eacute;e.</h2>
-					<h2 class="subtitle"><span class="small">(Parce que oui, Pierre, un iPhone 6 sera toujours mieux que tes "d&eacute;lires d'artiste")</span></h3>
+					<h2 class="subtitle"><span class="small">(Parce que oui, Pierre, un iPhone 6S sera toujours mieux que tes "d&eacute;lires d'artiste")</span></h3>
 					<img src="assets/img/pourri.jpg" class="img_responsive img_shadow">
-					<!-- 
+					<!--
           <h2 class="subtitle">Pour conna&icirc;tre l'heureux-se &eacute;lu-e, reviens dans :</h2>
 					<div id="countdown"></div>
           <h2 class="subtitle"><span class="small">(Ou peut-&ecirc;tre avant)</span></h3>
-           -->  
-					
+           -->
+
           <h2 class="subtitle">Pour conna&icirc;tre l'heureux-se &eacute;lu-e, saisis ton code :</h2>
           <br>
           <form class="form-inline signup" role="form" action="noel.php" method="get">
@@ -70,7 +70,7 @@
 							<input type="text" class="form-control" id="c" name="c" placeholder="Rentre ton code">
 						</div>
 						<button type="submit" class="btn btn-theme">Allez, viens.</button>
-					</form>		 
+					</form>
 				</div>
 			</div>
 			<div class="row">
@@ -78,7 +78,7 @@
 						<p class="copyright">Cl&eacute;ment Boudon</p>
                         <p><h6><a href="http://bootstraptaste.com" target="_blank">Th&egrave;me Webuild Bootstraptaste.com</a></h6></p>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

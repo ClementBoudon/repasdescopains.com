@@ -48,6 +48,51 @@ CREATE TABLE IF NOT EXISTS `ProfilsNoel` (
 -- Contenu de la table `ProfilsNoel`
 --
 
+
+
+--
+-- Structure de la table `ProfilsLOLNoel`
+--
+
+CREATE TABLE IF NOT EXISTS `ProfilsLOLNoel` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL DEFAULT '',
+  `genre` enum('m','f') NOT NULL DEFAULT 'm',
+  `commentaire` text NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `ProfilsLOLNoel`
+--
+
+INSERT INTO `ProfilsLOLNoel` (`id`, `nom`, `genre`, `commentaire`) VALUES
+(1, 'Michel Mercier', 'm', 'Parce qu\\''il a grandement besoin de cadeaux.'),
+(2, 'Emile Louis', 'm', 'Il appr&eacute;cierait un nouvel autobus je crois.'),
+(3, 'Francis Heaulme', 'm', 'Je crois qu''il recherche l''&eacute;pisode \\''Le routard du crime\\'' de \\''Faites entrer l''accus&eacute;\\'', si t''as le DVD &ccedil;a lui ferait plaisir.'),
+(4, 'Michael Jackson', 'm', 'Bonne chance.'),
+(5, 'Philippe Augros', 'm', 'D&eacute;merde-toi avec &ccedil;a. '),
+(6, 'Kim Jong Un', 'm', 'Il a des go&ucirc;ts plut&ocirc;t difficiles je crois.');
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `ProfilsLOLNoel`
+--
+ALTER TABLE `ProfilsLOLNoel`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `ProfilsLOLNoel`
+--
+ALTER TABLE `ProfilsLOLNoel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
