@@ -49,7 +49,6 @@ CREATE TABLE IF NOT EXISTS `ProfilsNoel` (
 --
 
 
-
 --
 -- Structure de la table `ProfilsLOLNoel`
 --
