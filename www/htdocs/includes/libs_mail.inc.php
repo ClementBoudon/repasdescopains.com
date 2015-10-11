@@ -88,9 +88,11 @@ function envoi_mail_code($email,$nom,$pass){
 
 function sendEmailMailjet($email,$titre_mail,$contenu_mail,$headers,$email_exp,$contenu_mail_txt)
 {
+
+    if(!isset($mailjet_apiKey)) include 'config.php';
     require_once 'includes/php-mailjet-v3-simple.class.php';
 
-    $mj = new Mailjet();
+    $mj = new Mailjet($mailjet_apiKey,$mailjet_secretKey);
 
     $params = array(
         "method" => "POST",

@@ -1,4 +1,5 @@
 <?php
+include_once('config.php');
 
 /* UPDATE `ProfilsNoel` SET offre=0, id_profil_recoit = 0, pass='', mail_envoye=0 WHERE 1 */
 
@@ -8,9 +9,9 @@ include_once('includes/libs_mail.inc.php');
 include_once('includes/libs_code.inc.php');
 
 echo "Tirage au sort :<br /><br />";
-$link_mysql = mysql_connect("localhost","sqluser01",'') or die("Impossible de se connecter : " . mysql_error());
+$link_mysql = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Impossible de se connecter : " . mysql_error());
 
-
+mysql_select_db($mysql_database,$link_mysql);
 
 
 //on parcours chaque profil non traité

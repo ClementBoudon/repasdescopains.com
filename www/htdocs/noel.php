@@ -1,12 +1,13 @@
 <?php
+include_once('config.php');
 
 include_once('includes/libs_mail.inc.php');
 include_once('includes/libs_code.inc.php');
 
-$link_mysql = mysql_connect("localhost","sqluser01",'') or die("Impossible de se connecter : " . mysql_error());
+$link_mysql = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Impossible de se connecter : " . mysql_error());
 mysql_set_charset ( 'utf8',$link_mysql );
 //$link_mysql = mysql_connect("localhost","root","Kma65Gtu") or die("Impossible de se connecter : " . mysql_error($link_mysql));
-mysql_select_db("repasdesodsql",$link_mysql);
+mysql_select_db($mysql_database,$link_mysql);
 
 $messsage_erreur='';
 $messsage_erreur_code='';

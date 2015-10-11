@@ -1,0 +1,9 @@
+.DS_STORE
+.vagrant
+
+# Composer
+composer.phar
+vendor/
+
+
+config.php
