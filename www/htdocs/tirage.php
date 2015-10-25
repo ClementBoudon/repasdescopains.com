@@ -1,10 +1,13 @@
 <?php
 include_once('config.php');
 
-/* UPDATE `ProfilsNoel` SET offre=0, id_profil_recoit = 0, pass='', mail_envoye=0 WHERE 1 */
-
-exit();
 /*
+UPDATE ProfilsNoel
+SET offre=0, id_profil_recoit = 0, pass='', mail_envoye=0
+WHERE 1;
+*/
+
+
 include_once('includes/libs_mail.inc.php');
 include_once('includes/libs_code.inc.php');
 
@@ -13,7 +16,7 @@ $link_mysql = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Impossi
 
 mysql_select_db($mysql_database,$link_mysql);
 
-
+/*
 //on parcours chaque profil non traité
 $QryProfils = 'SELECT id, email, pass, nom, id_profils_exclus FROM ProfilsNoel WHERE offre =\'0\' ORDER BY id_profils_exclus DESC,  RAND() ';
 $QryProfilsRes = mysql_query($QryProfils,$link_mysql) or die("Erreur : " . mysql_error($link_mysql));
@@ -77,8 +80,8 @@ while($RowProfils = mysql_fetch_assoc($QryProfilsRes)){
 	mysql_free_result($QryGagnantRes);
 
 }
+*/
 
 
-
-mysql_close($link_mysql);*/
+mysql_close($link_mysql);
 ?>

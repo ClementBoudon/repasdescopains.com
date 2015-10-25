@@ -101,7 +101,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.countdown.min.js"></script>
 	<script type="text/javascript">
-  $('#countdown').countdown('2014/11/02 21:00:00', function(event) {
+  $('#countdown').countdown('2015/10/25 20:30:00', function(event) {
     $(this).html(event.strftime('<strong>%-D</strong> jour%!D,<br /> <strong>%-H</strong> heure%!H, <strong>%-M</strong> minute%!M et <strong>%-S</strong> seconde%!S'));
   });
 </script>
