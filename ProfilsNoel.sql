@@ -92,6 +92,23 @@ ALTER TABLE `ProfilsLOLNoel`
 ALTER TABLE `ProfilsLOLNoel`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 
+
+CREATE TABLE IF NOT EXISTS `LogsAll` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `datetime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `id_profil` int(11) DEFAULT NULL,
+  `code` varchar(255) DEFAULT NULL,
+  `id_profil_lol` int(11) DEFAULT NULL,
+  `get` text,
+  `post` text,
+  `server` text,
+  `cookie` text,
+  `session` text,
+  PRIMARY KEY (`id`),
+  KEY `id_profil` (`id_profil`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

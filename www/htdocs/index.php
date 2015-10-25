@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+
+  include_once('config.php');
+
+  include_once('includes/libs_logs.inc.php');
+
+
+  $link_mysql = mysql_connect($mysql_host,$mysql_user,$mysql_pass) or die("Impossible de se connecter : " . mysql_error());
+  mysql_set_charset ( 'utf8',$link_mysql );
+  mysql_select_db($mysql_database,$link_mysql);
+
+
+  log_all($link_mysql);
+
+  mysqli_close($link_mysql);
+
+?><!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
